@@ -12,15 +12,22 @@ const numberOfLatestPostsToShow = 3;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	gap: 1em;
 }
-a.button-detail {
+a[href].button-detail,
+a[href].button-detail:visited {
 	flex-basis: auto;
-	border: 1px solid var(--borders-color);
+	color: var(--text-color-link);
+	border: 1px solid var(--text-color-link);
 	border-radius: 0.25em;
-	margin: 0.5em;
 	padding: 0.5em;
 	text-decoration: none;
 	transition: all 0.5s;
+}
+a[href].button-detail:hover {
+	border-color: var(--text-color-link-active);
+	color: var(--text-color-link-active);
+	padding: 0.5em 1em;
 }
 a.button-detail .icon {
 	display: inline-block;
@@ -30,6 +37,21 @@ a.button-detail .icon {
 }
 a.button-detail .icon svg span {
 	fill: currentColor;
+}
+a[href].button-schedule-call,
+a[href].button-schedule-call:visited {
+	border: 1px solid var(--borders-color);
+	border-radius: 0.25em;
+	background-color: var(--text-color-link);
+	color: var(--background-color);
+	padding: 0.5em;
+	text-decoration: none;
+	transition: all 0.5s;
+}
+a[href].button-schedule-call:hover {
+	background-color: var(--text-color-link-active);
+	color: var(--background-color);
+	padding: 0.5em 1.5em;
 }
 {% endcss %}
 
@@ -56,7 +78,8 @@ a.button-detail .icon svg span {
 			</a>
 		</div>
 		
-		<p>I'm mapping the climate change space and learning as much as I can. If you think I can help you, or want to share with me, please...</p>
+		<p>I'm mapping the climate change space and learning about the ways to help as a technologist.</p>
+		<p>If you think I can help you, or want to share with me, please...</p>
 		
 		
 		<a class="button-schedule-call" href="https://calendly.com/hola-noelr/30min">Let's talk!</a>
