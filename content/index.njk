@@ -6,6 +6,102 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 3;
 ---
+
+{% css %}
+.page-links {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+a.button-detail {
+	flex-basis: auto;
+	border: 1px solid var(--borders-color);
+	border-radius: 0.25em;
+	margin: 0.5em;
+	padding: 0.5em;
+	text-decoration: none;
+	transition: all 0.5s;
+}
+a.button-detail .icon {
+	display: inline-block;
+	margin-left: 1em;
+	width: 1em;
+	height: 1em;
+}
+a.button-detail .icon svg span {
+	fill: currentColor;
+}
+{% endcss %}
+
+<main class="home">
+	<h1>Hi! I'm Noel Rivas</h1>
+
+	<section class="intro">
+		<p>A web developer and software engineer with 20 years of experience —and web designer before that.</p>
+		<p>I've led and worked hands-on on dozens of projects for national, regional and global organizations, including the IUCN, People Powered and the National Fund For the Conservation of Nature (Mexico).</p>
+		<p></p>
+
+		<div class="page-links">
+			<a class="button-detail" href="#">
+				Technical skills and experience
+				<span class="icon">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM297 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L120 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l214.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L409 239c9.4 9.4 9.4 24.6 0 33.9L297 385z"/></svg>
+				</span>
+				</a>
+			<a class="button-detail" href="#">
+				Work style and other skills
+				<span class="icon">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM297 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L120 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l214.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L409 239c9.4 9.4 9.4 24.6 0 33.9L297 385z"/></svg>
+				</span>
+			</a>
+		</div>
+		
+		<p>I'm mapping the climate change space and learning as much as I can. If you think I can help you, or want to share with me, please...</p>
+		
+		
+		<a class="button-schedule-call" href="https://calendly.com/hola-noelr/30min">Let's talk!</a>
+	</section>
+</main>
+
+{#
+<div>
+	<p>Hi! I'm Noel Rivas</p>
+	<p>I collaborate with companies and organizations addressing climate change.</p>
+	<p>I've been writing software for 20 years, and started my career earlier as a designer.</p>
+</div>
+
+<p>I've led and worked hands-on on dozens of projects for over 20 national, regional and global organizations, including IUCN, People Powered and National Fund for the Conservation of Nature (in Mexico).</p>
+<p><a href="/portfolio">portfolio</a></p>
+
+<h2>How can all of this help you?</h2>
+
+<ul>
+	<li></li>
+	<li>I know what you're talking about </li>
+	<li>Clear process, proactive communication</li>
+	<li>Strong software development skills</li>
+</ul>
+
+<h3>I know that you're talking about</h3>
+Chances are, I'll get your needs or situation without much explaining. No need to explain SDGs, Kyoto or COP; and for things that need explaining, I'll get up to speed in no time.
+
+<h3>Clear process, proactive communication</h3>
+<p>Software development projects can be complex, involve multiple stakeholders and feel like cat herding. </p>
+<p>To keep the process from being overwhelming, I:</p>
+<ul>
+	<li>Work with you to set goals, success criteria and identify risks. Then, follow up on those criteria so you always know where we are and where we are headed.</li>
+	<li>Keep the technical complexity low. The less moving parts there are, the less there will be to maintain and fix.</li>
+	<li>I help all stakeholders to understand the project from their perspective, without needless technical jargon.</li>
+</ul>
+
+<h3>Strong software development skills</h3>
+<p>I'm comfortable in the TypeScript, JavaScript and PHP ecosystems. I've developed CMS - based websites, databases, mobile and web-based apps.</p>
+<p>In addition to those, I've put together a rich toolkit that includes other languages and tools I can draw from to design the simplest, most reliable solutions.</p>
+
+<a href="/technical-skills">More on technical skills</a>
+#}
+
+{#
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
@@ -18,6 +114,7 @@ const numberOfLatestPostsToShow = 3;
 {% if morePosts > 0 %}
 <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
 {% endif %}
+#}
 
 {# List every content page in the project #}
 {#
