@@ -62,9 +62,9 @@
 	--cyan: #2aa198;
 	--green: #859900;
 	
-	--text-color-link: var(--blue);
+	--text-color-link: var(--cyan);
 	--text-color-link-visited: var(--cyan);
-	--text-color-link-active: var(--cyan);
+	--text-color-link-active: var(--green);
 	--background-color: var(--base3);
 	--borders-color: var(--base1);
 	
