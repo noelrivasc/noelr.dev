@@ -1,6 +1,6 @@
 ---js
 const eleventyNavigation = {
-	key: "Skills",
+	key: "Technical Skills",
 	order: 3
 };
 ---
