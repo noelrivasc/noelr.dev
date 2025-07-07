@@ -29,3 +29,7 @@ Chances are, I'll understand you without much explaining. I'm proactive in resea
 ## Simpler is Better
 
 Rather than driving projects to towards complicated solutions, I seek to come up with the most efficient, easy to maintain ones. The easiest code to maintain is the one whose writing is avoided in the first place.
+
+### Are you building climate solutions? 🌎
+
+Get free web software development advice → [30-min call available](https://calendly.com/hola-noelr/30min)
