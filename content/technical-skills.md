@@ -4,12 +4,43 @@ const eleventyNavigation = {
 	order: 3
 };
 ---
+
 # Technical Skills
 
-I'm comfortable in the TypeScript, JavaScript, NodeJS and PHP ecosystems. I've developed CMS - based websites, databases, mobile and web-based apps. I've done some Ruby, Python and, more recently, Clojure and ClojureScript.
+As a climate tech startup founder, you want your software to be flexible so you can adapt quickly, but stable so you can build on it as you grow.
 
-Some of the tools and frameworks I've used substantially are Serverless Framework, Laravel, React Native, VueJS, Drupal, PostgreSQL, MySQL and MariaDB, various AWS services, and LeafletJS.
+I have 20+ years of experience in software development, and 10+ of leading teams.
 
-Other standards like git, GitHub, Linux, shell scripts, linters, build tools and the like are part of my workflow.
+In this time, I've acquired the tools and intuition to plan and steward software development projects to strike a balance between stability and flexibility.
 
-One tends to collect lots of technologies in 20 years of software development. Wondering about some specific not mentioned here? [Drop me a line!](mailto:web@noelr.dev)
+## Stakeholder Communication
+
+While these are non-coding skills, they are essential to the success of a project:
+
+- Design and architecture. While agile and iteration are great, some planning and forethought are essential to avoid ending up with entangled code that eventually hinders progress.
+- Acting as communication bridge between developers and non-technical stakeholders, bringing clarity to both sides, in their own language.
+- Helping non-technical stakeholders understand options and tradeoffs, and to contribute to technical decisions.
+
+## Types of Products
+
+I've developed web-based and mobile apps, databases, GIS and content management systems.
+
+## Infrastructure & DevOps
+
+AWS, shell scripting, Docker, process automation, GitHub actions, DDEV.
+
+The use of these tools to make the development and deployment process repeatable, stable and predictable leads to easier testing, improved developer performance and reduced human error.
+
+## Languages & Frameworks
+
+I'm at home with TypeScript, JavaScript, NodeJS and PHP ecosystems. I've done some Ruby, Python and, more recently, Clojure and ClojureScript. SQL either with MySQL or PostgreSQL are daily drivers.
+
+At the framework level: React, React Native, VueJS, Express, Serverless Framework, Laravel, Drupal, LeafletJS.
+
+## UX + AI
+
+While I haven't shipped software that makes use of AI models, I see promise in using them to fix impedance mismatches and to facilitate climate action coordination.
+
+### Are you building climate solutions? 🌎
+
+Get free web software development advice → [30-min call available](https://calendly.com/hola-noelr/30min)

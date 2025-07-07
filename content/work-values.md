@@ -1,10 +1,10 @@
 ---js
 const eleventyNavigation = {
-	key: "Work style",
+	key: "Work values",
 	order: 2
 };
 ---
-# Work Style
+# Work Values
 
 There's more than technical skills. The success and ease of our collaboration hinges on the shared ability to communicate, make plans and deliver on them.
 
@@ -14,7 +14,7 @@ Sometimes projects flow super nicely; sometimes they get hard. Regardless of the
 
 ## Clear Process, Proactive Communication
 
-Software development projects can be complex, involve multiple stakeholders and feel like cat herding. 
+Software development projects can be complex, involve multiple stakeholders and feel like cat herding.
 
 Here's what I do to keep the process from being overwhelming:
 
@@ -23,7 +23,8 @@ Here's what I do to keep the process from being overwhelming:
 - I help all stakeholders to understand the project from their perspective, without needless technical jargon.
 
 ## I Know What You're Talking About
-Chances are, I'll get your needs or situation without much explaining. No need to explain SDGs, Kyoto or COP; for things that need explaining, I'm proactive in learning your context and language so we can have the most productive and enjoyable conversations.
+
+Chances are, I'll understand you without much explaining. I'm proactive in researching your domain's context and language so we can have the most productive and enjoyable conversations.
 
 ## Simpler is Better
 
