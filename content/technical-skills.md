@@ -7,7 +7,7 @@ const eleventyNavigation = {
 
 # Technical Skills
 
-As a climate tech startup founder, you want your software to be flexible so you can adapt quickly, but stable so you can build on it as you grow.
+You want your software to be flexible so you can adapt quickly, but stable so you can build on it as you grow.
 
 I have 20+ years of experience in software development, and 10+ of leading teams.
 
