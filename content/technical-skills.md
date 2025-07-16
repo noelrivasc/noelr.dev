@@ -37,6 +37,10 @@ I'm at home with TypeScript, JavaScript, NodeJS and PHP ecosystems. I've done so
 
 At the framework level: React, React Native, VueJS, Express, Serverless Framework, Laravel, Drupal, LeafletJS.
 
+## Drupal
+
+I have over 20 years of experience with Drupal and have used it to build sites for organizations such as IUCN and the Mexican Fund for the Conservation of Nature.
+
 ## UX + AI
 
 While I haven't shipped software that makes use of AI models, I see promise in using them to fix impedance mismatches and to facilitate climate action coordination.
