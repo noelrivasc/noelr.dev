@@ -3,35 +3,30 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
-		<meta name="description" content="{{ description or metadata.description }}">
-		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<title>{{ title | default: metadata.title }}</title>
+		<meta name="description" content="{{ description | default: metadata.description }}">
 
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+		{%- css "base" %}
+		{% # Grouping base styles allows control of the order in which they are output %}
+		{% include "public/css/fonts.css" %}
+		{% include "public/css/colors.css" %}
+		{% include "public/css/index.css" %}
+		{% endcss %}
 
-		{#-
-		Plain-text bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. CSS:
-			* Add to a per-page bundle using `{% css %}{% endcss %}`
-			* Retrieve bundle content using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		2. Or for JavaScript:
-			* Add to a per-page bundle using `{% js %}{% endjs %}`
-			* Retrieve via `{% getBundle "js" %}` or `{% getBundleFileUrl "js" %}`
-		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
+		{% comment %}
+		{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+		{% endcomment %}
 
-		{#- Add the contents of a file to the bundle #}
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
-		{#- Or you can add from node_modules #}
-		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
-
-		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
+		{% # Render the CSS bundle using inlined CSS (for the fastest site performance in production)%}
+		<style>{% getBundle "css" "base" %}</style>
 		<style>{% getBundle "css" %}</style>
-		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
-		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
-		{#- Add the heading-anchors web component to the JavaScript bundle #}
+		{% # Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' %}
+		{% comment %}
+		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+		{% endcomment %}
+
+		{% # See https://github.com/daviddarnes/heading-anchors %}
 		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
 	</head>
 	<body>
@@ -40,11 +35,12 @@
 		<header>
 			<a href="/" class="home-link">{{ metadata.title }}</a>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+			{% # Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ %}
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
+				{%- assign navPages = collections.all | eleventyNavigation %}
+				{%- for entry in navPages %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
 
@@ -76,13 +72,9 @@
 
 		<main id="skip">
 			<heading-anchors>
-				{{ content | safe }}
+				{{ content }}
 			</heading-anchors>
 		</main>
-
-		<footer>
-			<p style="opacity: 0.5;"><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></p>
-		</footer>
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>

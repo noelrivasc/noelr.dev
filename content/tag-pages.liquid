@@ -1,5 +1,7 @@
----js
-// <script>
+{% comment %}
+TODO: convert to Liquid
+
+<script>
 const pagination = {
 	data: "collections",
 	size: 1,
@@ -16,10 +18,12 @@ const eleventyComputed = {
 		return `/tags/${this.slugify(data.tag)}/`;
 	}
 };
----
+</script>
+
 <h1>Tagged “{{ tag }}”</h1>
 
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
 
-<p>See <a href="tags.njk">all tags</a>.</p>
+<p>See <a href="tags.liquid">all tags</a>.</p>
+{% endcomment %}
