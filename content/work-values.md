@@ -1,9 +1,3 @@
----js
-const eleventyNavigation = {
-	key: "Work values",
-	order: 2
-};
----
 # Work Values
 
 There's more than technical skills. The success and ease of our collaboration hinges on the shared ability to communicate, make plans and deliver on them.

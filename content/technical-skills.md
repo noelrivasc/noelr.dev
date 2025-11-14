@@ -1,9 +1,3 @@
----js
-const eleventyNavigation = {
-	key: "Technical Skills",
-	order: 3
-};
----
 
 # Technical Skills
 

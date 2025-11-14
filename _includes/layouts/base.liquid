@@ -13,9 +13,7 @@
 		{% include "public/css/index.css" %}
 		{% endcss %}
 
-		{% comment %}
-		{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
-		{% endcomment %}
+		{%- js %}{% include "node_modules/@tailwindplus/elements/dist/index.js" %}{% endjs %}
 
 		{% # Render the CSS bundle using inlined CSS (for the fastest site performance in production)%}
 		<style>{% getBundle "css" "base" %}</style>
@@ -30,22 +28,10 @@
 		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
 	</head>
 	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
+		<a href="#skip" class="sr-only">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
-
-			{% # Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ %}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- assign navPages = collections.all | eleventyNavigation %}
-				{%- for entry in navPages %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
-			</nav>
-		</header>
+		{%- assign navPages = collections.all | eleventyNavigation %}
+		{% render 'header' with navPages as navPages %}
 
 		<main id="skip">
 			<heading-anchors>

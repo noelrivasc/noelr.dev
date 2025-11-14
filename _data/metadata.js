@@ -1,8 +1,8 @@
 export default {
-	title: "Noel R",
+	title: "Noel Rivas",
 	url: "https//noelr.dev",
 	language: "en",
-	description: "I'm a web developer helping organizations that fight climate change.",
+	description: "I'm a software designer and developer. I help climate nonprofit and startup leaders turn ideas into working software —from concept to launch and beyond.",
 	author: {
 		name: "Noel Rivas",
 		email: "hola@noelr.dev",

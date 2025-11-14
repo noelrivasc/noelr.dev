@@ -1,0 +1,16 @@
+/*
+Imported directly in base.liquid for performance.
+@import "css/fonts.css";
+@import "css/colors.css";
+*/
+
+@import "tailwindcss";
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
