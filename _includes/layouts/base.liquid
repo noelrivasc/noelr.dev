@@ -27,7 +27,7 @@
 		{% # See https://github.com/daviddarnes/heading-anchors %}
 		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
 	</head>
-	<body>
+	<body class="bg-ground text-body">
 		<a href="#skip" class="sr-only">Skip to main content</a>
 
 		{%- assign navPages = collections.all | eleventyNavigation %}
@@ -38,6 +38,9 @@
 				{{ content }}
 			</heading-anchors>
 		</main>
+
+		{% render 'footer' %}
+
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
