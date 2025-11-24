@@ -1,4 +1,4 @@
-		<footer class="bg-ground py-12 px-6">
+		<footer class="bg-ground py-12 px-6 px inset-shadow-sm inset-shadow-c02/50">
 			<div class="max-w-5xl mx-auto flex items-start gap-12">
 				<!-- Logo placeholder -->
 				<div class="flex-shrink-0">
@@ -7,16 +7,6 @@
 
 				<!-- Navigation and contact -->
 				<div class="flex-grow">
-					<!-- Menu -->
-					<nav class="mb-6">
-						<ul class="flex gap-6 text-sm font-medium text-body-subtle transition-colors">
-							<li><a href="/" class="transition-colors hover:text-orange">Home</a></li>
-							<li><a href="/portfolio/" class="transition-colors hover:text-orange">Portfolio</a></li>
-							<li><a href="/services/" class="transition-colors hover:text-orange">Services</a></li>
-							<li><a href="/about/" class="transition-colors hover:text-orange">About</a></li>
-						</ul>
-					</nav>
-
 					<!-- Contact links -->
 					<div class="flex gap-6 text-sm text-orange">
 						<a href="mailto:hola@noelr.dev">hola@noelr.dev</a>
@@ -27,6 +17,17 @@
 							LinkedIn
 						</a>
 					</div>
+
+
+					<!-- Menu -->
+					<nav class="mb-6">
+						<ul class="flex flex-col mt-4 gap-2 text-sm font-medium text-body-subtle transition-colors">
+							{%- for entry in navPages %}
+								<a href="{{ entry.url }}" {% if entry.url == page.url %}aria-current="page"{% endif %} class="transition-colors hover:text-orange">{{ entry.title }}</a>
+							{%- endfor %}
+						</ul>
+					</nav>
+
 				</div>
 			</div>
 		</footer>
