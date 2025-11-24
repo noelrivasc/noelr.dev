@@ -14,3 +14,64 @@ Imported directly in base.liquid for performance.
 @view-transition {
 	navigation: auto;
 }
+
+@theme {
+	--font-serif: Merriweather, serif;
+	--font-sans: 'Merriweather Sans', system-ui, sans-serif;
+	--font-sans-weight: 100;
+	--font-mono: Consolas, Menlo, Monaco,
+		/* full stack from fonts.css */
+	;
+
+	/* Solarized Base Colors */
+	--color-base03: var(--base03);
+	--color-base02: var(--base02);
+	--color-base01: var(--base01);
+	--color-base00: var(--base00);
+	--color-base0: var(--base0);
+	--color-base1: var(--base1);
+	--color-base2: var(--base2);
+	--color-base3: var(--base3);
+
+	/* Solarized Accent Colors */
+	--color-yellow: var(--yellow);
+	--color-orange: var(--orange);
+	--color-red: var(--red);
+	--color-magenta: var(--magenta);
+	--color-violet: var(--violet);
+	--color-blue: var(--blue);
+	--color-cyan: var(--cyan);
+	--color-green: var(--green);
+
+	/* Contrast-based color scale (light mode) */
+	--color-ground: var(--base3);
+	--color-c01: var(--base2);
+	--color-c02: var(--base1);
+	--color-c03: var(--base0);
+	--color-c04: var(--base00);
+	--color-c05: var(--base01);
+	--color-c06: var(--base02);
+	--color-c07: var(--base03);
+
+	--color-page-background: var(--color-ground);
+	--color-body: var(--color-c07);
+	--color-body-subtle: var(--color-c05);
+	--color-body-inverted: var(--color-ground);
+	--color-heading: var(--orange);
+	--color-cta: var(--orange);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Contrast-based color scale (dark mode) */
+		--color-ground: var(--base03);
+		--color-c01: var(--base02);
+		--color-c02: var(--base01);
+		--color-c03: var(--base00);
+		--color-c04: var(--base0);
+		--color-c05: var(--base1);
+		--color-c06: var(--base2);
+		--color-c07: var(--base3);
+
+	}
+}
