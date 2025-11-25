@@ -1,0 +1,37 @@
+---js
+const eleventyNavigation = {
+key: "Services",
+order: 3
+};
+---
+
+<div class="container mx-auto max-w-5xl px-4 lg:px-0">
+	<section class="py-12 md:py-16">
+		<h1 class="font-serif text-heading text-4xl md:text-5xl font-bold tracking-tight">
+			Services
+		</h1>
+		<p class="font-thin text-xl md:text-2xl leading-relaxed max-w-3xl">
+			I help climate nonprofit and startup leaders turn ideas into working software.
+		</p>
+	</section>
+
+	<!-- Consultation Call -->
+	{% render './call' %}
+
+	<!-- Foundations and Discovery -->
+	{% render './foundations' %}
+
+	<!-- Full Project Development -->
+	{% render './project' %}
+
+	<section class="my-12 md:my-16">
+		<div class="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+			<p class="font-thin text-base md:text-lg text-body-subtle">
+				Not ready to schedule a call? <span class="font-normal">Explore some of my work:</span>
+			</p>
+			<a href="/portfolio/" class="md:text-lg p-2 border-1 border-c02 hover:bg-c01 transition-colors shadow-md rounded-md">
+				Portfolio ➡️
+			</a>
+		</div>
+	</section>
+</div>
