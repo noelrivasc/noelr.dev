@@ -1,0 +1,51 @@
+---js
+{
+	"tags": "databaseProject",
+	"permalink": false,
+	"project":
+		{
+			"title": "UN Advocacy Tool",
+			"client": "Sexual Rights Initiative",
+			"images": [
+				{
+					"src": "./img/sri-untool-1.png",
+					"alt": "Database search interface"
+				},
+				{
+					"src": "./img/sri-untool-2.png",
+					"alt": "Feature: save search criteria"
+				},
+				{
+					"src": "./img/sri-untool-3.png",
+					"alt": "Database search results"
+				},
+			]
+		}
+}
+---
+
+{% capture body %}
+	<p class="font-thin text-base md:text-lg text-body">
+		A tool with fine-grained search of United Nations agreements on sexual and reproductive health and rights.
+	</p>
+	<p class="font-thin text-base md:text-lg text-body-subtle">
+		The database is mainly a resource for advocates and researchers who need to track and analyze agreements reached through different UN mechanisms.
+	</p>
+
+	<ul class="font-thin text-body-subtle space-y-1 text-base md:text-lg list-disc list-inside">
+		<li>Airtable integration.</li>
+		<li>Full-text search with Elastic Search.</li>
+		<li>Rich content structure and search criteria.</li>
+		<li>Built in collaboration with Matrushka —my former consultancy.</li>
+	</ul>
+
+	<a class="inline-block font-thin text-orange p-2 border border-white/40 bg-linear-to-t from-white/10 to-white/3 rounded-md shadow-sm hover:shadow-lg transition-shadow" href="https://www.unadvocacy.org">Visit app</a>
+{% endcapture %}
+
+{%
+	render '../components/project',
+	title: project.title,
+	client: project.client,
+	body: body,
+	images: project.images
+%}

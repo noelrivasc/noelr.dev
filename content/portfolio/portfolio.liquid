@@ -15,6 +15,7 @@ order: 2
 		</p>
 	</section>
 
+	<!-- AI / LLM -->
 	<section class="my-12 md:my-16 space-y-12">
 		<div>
 			<h2 class="text-3xl md:text-4xl font-bold font-serif text-heading tracking-tight mb-2">
@@ -27,6 +28,24 @@ order: 2
 
 		<div>
 		{% for project in collections.llmProject %}
+			{{ project.templateContent }}
+		{% endfor %}
+		</div>
+	</section>
+
+	<!-- Databases -->
+	<section class="my-12 md:my-16 space-y-12">
+		<div>
+			<h2 class="text-3xl md:text-4xl font-bold font-serif text-heading tracking-tight mb-2">
+				Databases
+			</h2>
+			<p class="font-thin text-base md:text-lg text-body-subtle">
+				Structured systems for managing and accessing information.
+			</p>
+		</div>
+
+		<div>
+		{% for project in collections.databaseProject %}
 			{{ project.templateContent }}
 		{% endfor %}
 		</div>

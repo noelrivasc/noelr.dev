@@ -1,0 +1,42 @@
+---js
+{
+	"tags": "databaseProject",
+	"permalink": false,
+	"project":
+		{
+			"title": "ICPD +25 Database",
+			"client": "International Planned Parenthood Federation",
+			"images": [
+				{
+					"src": "./img/ippf-icpd25.png",
+					"alt": "Database search interface"
+				},
+			]
+		}
+}
+---
+
+{% capture body %}
+	<p class="font-thin text-base md:text-lg text-body">
+		Database of government commitments made during the Nairobi ICPD+25 Summit.
+	</p>
+	<p class="font-thin text-base md:text-lg text-body-subtle">
+		The client needed the database in time for an event. In a tight schedule, we developed the database, which included an integration to migrate content from Google Sheets.
+	</p>
+
+	<ul class="font-thin text-body-subtle space-y-1 text-base md:text-lg list-disc list-inside">
+		<li>Large amounts of structured content imported from an existing Google Sheets document.</li>
+		<li>Launched in less than a month, in preparation for a public event.</li>
+		<li>Content maintained in Google Sheets.</li>
+	</ul>
+
+	<a class="inline-block font-thin text-orange p-2 border border-white/40 bg-linear-to-t from-white/10 to-white/3 rounded-md shadow-sm hover:shadow-lg transition-shadow" href="https://www.icpd25commitments.org/">Visit app</a>
+{% endcapture %}
+
+{%
+	render '../components/project',
+	title: project.title,
+	client: project.client,
+	body: body,
+	images: project.images
+%}
