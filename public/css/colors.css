@@ -7,8 +7,15 @@
 	--base00: #657b83;
 	--base0: #839496;
 	--base1: #93a1a1;
+
+	/**
+	 * Solarized originals:
 	--base2: #eee8d5;
 	--base3: #fdf6e3;
+	*/
+
+	--base2: #e9e6da;
+	--base3: #f8f4e8;
 
 	/* Solarized Accent Colors */
 	--yellow: #b58900;
@@ -34,4 +41,3 @@
 		--color-c07: var(--base3);
 	}
 }
-
