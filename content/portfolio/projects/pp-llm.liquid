@@ -1,0 +1,45 @@
+---js
+{
+	"tags": "llmProject",
+	"permalink": false,
+	"project":
+		{
+			"title": "AI Feasibility Analysis",
+			"client": "People Powered",
+			"images": [
+				{
+					"src": "./img/pp-llm.png",
+					"alt": "LLM Model comparison grid"
+				},
+			]
+		}
+}
+---
+
+{% capture body %}
+	<p class="font-thin text-base md:text-lg text-body">
+		Can AI models help us provide better guidance to end users in navigating a complex process?
+	</p>
+	<p class="font-thin text-base md:text-lg text-body-subtle">
+		That's the question we tried to answer. The results were encouraging: LLMs can help users navigate a complex process —but some models are much better than others.
+	</p>
+	<p class="font-thin text-base md:text-lg text-body-subtle">
+		Tasks involved:
+	</p>
+
+	<ul class="font-thin text-body-subtle space-y-1 text-base md:text-lg list-disc list-inside">
+		<li>Define goals.</li>
+		<li>Design prompts and sample context.</li>
+		<li>Select test models.</li>
+		<li>Design and run the experiment.</li>
+		<li>Present a report of outcomes and recommendations.</li>
+	</ul>
+{% endcapture %}
+
+{%
+	render '../components/project',
+	title: project.title,
+	client: project.client,
+	body: body,
+	images: project.images
+%}

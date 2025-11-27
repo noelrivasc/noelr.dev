@@ -1,0 +1,42 @@
+---js
+{
+	"tags": "llmProject",
+	"permalink": false,
+	"project":
+		{
+			"title": "What Should I Do?",
+			"client": "Small AI Application — personal project",
+			"images": [
+				{
+					"src": "./img/wsid.png",
+					"alt": "Tool panel showing the factors involved in making a decision"
+				},
+			]
+		}
+}
+---
+
+{% capture body %}
+	<p class="font-thin text-base md:text-lg text-body">
+		A tiny tool that helps the user make complex decisions.
+	</p>
+	<p class="font-thin text-base md:text-lg text-body-subtle">
+		An exercise in AI engineering. Structured LLM output and rich interfaces.
+	</p>
+
+	<ul class="font-thin text-body-subtle space-y-1 text-base md:text-lg list-disc list-inside">
+		<li>A visual aid for reasoning.</li>
+		<li>Test the ability of open-source models.</li>
+		<li>Structured output / tool use.</li>
+	</ul>
+
+	<a class="inline-block font-thin text-orange p-2 border border-white/40 bg-linear-to-t from-white/10 to-white/3 rounded-md shadow-sm hover:shadow-lg transition-shadow" href="https://d3r6lgifjuis4q.cloudfront.net/">Visit app</a>
+{% endcapture %}
+
+{%
+	render '../components/project',
+	title: project.title,
+	client: project.client,
+	body: body,
+	images: project.images
+%}
