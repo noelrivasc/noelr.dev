@@ -49,7 +49,6 @@
 	},
 	"dependencies": {
 		"@tailwindcss/cli": "^4.1.17",
-		"@tailwindplus/elements": "^1.0.18",
 		"@zachleat/heading-anchors": "^1.0.1",
 		"tailwindcss": "^4.1.17"
 	}
