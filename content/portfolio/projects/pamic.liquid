@@ -1,0 +1,55 @@
+---js
+{
+	"tags": "mapProject",
+	"permalink": false,
+	"project":
+		{
+			"title": "PAMIC - Watershed Management Plans",
+			"client": "Mexican Fund for the Conservation of Nature (FMCN) / Mexican Institute of Ecology and Climate Change (INECC)",
+			"images": [
+				{
+					"src": "./img/pamic-1.png",
+					"alt": "Map"
+				},
+				{
+					"src": "./img/pamic-2.png",
+					"alt": "Screen with research details"
+				},
+				{
+					"src": "./img/pamic-3.png",
+					"alt": "Table comparing sexual rights laws between various countries"
+				},
+			]
+		}
+}
+---
+
+{% capture body %}
+	<p class="font-thin text-base md:text-lg text-body">
+		Map visualization of the state of laws related to sexual rights.
+	</p>
+
+	<ul class="font-thin text-body-subtle space-y-1 text-base md:text-lg list-disc list-inside">
+		<li>Drupal-based content management system (CMS).</li>
+		<li>The public site is fast and works even if the CMS is off.</li>
+		<li>Map visualization allows easy comparison.</li>
+		<li>Printer-friendly research documents.</li>
+		<li>Built with the Matrushka team.</li>
+	</ul>
+
+	<p class="font-thin text-xs md:text-base text-c03">
+		In collaboration with Matrushka —my former consultancy.
+	</p>
+	<p class="font-thin text-xs md:text-base text-c03">
+		Website no longer online.
+	</p>
+
+{% endcapture %}
+
+{%
+	render '../components/project',
+	title: project.title,
+	client: project.client,
+	body: body,
+	images: project.images
+%}

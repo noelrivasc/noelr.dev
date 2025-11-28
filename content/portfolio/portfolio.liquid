@@ -12,7 +12,7 @@ order: 2
 			Portfolio
 		</h1>
 		<p class="font-thin text-xl md:text-2xl leading-relaxed max-w-3xl">
-			I build web applications for climate nonprofits, civic tech organizations, and mission-driven startups. Here are examples of my work organized by project type.
+			I build web applications for climate nonprofits, civic tech organizations, and mission-driven startups. Here are examples of my work.
 		</p>
 	</section>
 
@@ -47,6 +47,24 @@ order: 2
 
 		<div>
 		{% for project in collections.databaseProject %}
+			{{ project.templateContent }}
+		{% endfor %}
+		</div>
+	</section>
+
+	<!-- Maps -->
+	<section class="my-12 md:my-16 space-y-12">
+		<div>
+			<h2 class="text-3xl md:text-4xl font-bold font-serif text-heading tracking-tight mb-2">
+				Maps
+			</h2>
+			<p class="font-thin text-base md:text-lg text-body-subtle">
+				Interactive mapping applications for spatial data and decision-making.
+			</p>
+		</div>
+
+		<div>
+		{% for project in collections.mapProject %}
 			{{ project.templateContent }}
 		{% endfor %}
 		</div>

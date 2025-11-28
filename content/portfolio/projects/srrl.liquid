@@ -1,0 +1,53 @@
+---js
+{
+	"tags": "mapProject",
+	"permalink": false,
+	"project":
+		{
+			"title": "Sexual Rights Database",
+			"client": "Sexual Rights Initiative",
+			"images": [
+				{
+					"src": "./img/srrl-1.png",
+					"alt": "Map"
+				},
+				{
+					"src": "./img/srrl-2.png",
+					"alt": "Screen with research details"
+				},
+				{
+					"src": "./img/srrl-3.png",
+					"alt": "Table comparing sexual rights laws between various countries"
+				},
+			]
+		}
+}
+---
+
+{% capture body %}
+	<p class="font-thin text-base md:text-lg text-body">
+		Map visualization of the state of laws related to sexual rights.
+	</p>
+
+	<ul class="font-thin text-body-subtle space-y-1 text-base md:text-lg list-disc list-inside">
+		<li>Drupal-based content management system (CMS).</li>
+		<li>The public site is fast and works even if the CMS is off.</li>
+		<li>Map visualization allows easy comparison.</li>
+		<li>Printer-friendly research documents.</li>
+		<li>Built with the Matrushka team.</li>
+	</ul>
+
+	<p class="font-thin text-xs md:text-base text-c03">
+		In collaboration with Matrushka —my former consultancy.
+	</p>
+
+	<a class="inline-block font-thin text-orange p-2 border border-white/40 bg-linear-to-t from-white/10 to-white/3 rounded-md shadow-sm hover:shadow-lg transition-shadow" href="https://sexualrightsdatabase.org/map/331/Conscientious%20Objection">Visit app</a>
+{% endcapture %}
+
+{%
+	render '../components/project',
+	title: project.title,
+	client: project.client,
+	body: body,
+	images: project.images
+%}
