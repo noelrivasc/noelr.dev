@@ -13,8 +13,6 @@
 		{% include "public/css/index.css" %}
 		{% endcss %}
 
-		{%- js %}{% include "node_modules/@tailwindplus/elements/dist/index.js" %}{% endjs %}
-
 		{% # Render the CSS bundle using inlined CSS (for the fastest site performance in production)%}
 		<style>{% getBundle "css" "base" %}</style>
 		<style>{% getBundle "css" %}</style>
@@ -30,11 +28,12 @@
 
 		{%- assign navPages = collections.all | eleventyNavigation %}
 		{% render 'header' with navPages as navPages %}
+		{%- js %}
+			{% include "header-menu.js" %}
+		{% endjs %}
 
 		<main id="skip">
-			<heading-anchors>
-				{{ content }}
-			</heading-anchors>
+			{{ content }}
 		</main>
 
 		{% render 'footer' with navPages as navPages %}
