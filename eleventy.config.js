@@ -9,7 +9,7 @@ import pluginFilters from "./_config/filters.js";
 export default async function(eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
 	});
@@ -100,6 +100,12 @@ export default async function(eleventyConfig) {
 	eleventyConfig.setServerOptions({
 		watch: ["_site/**/*.html"],
 	});
+
+	const projectTags = ['llmProject', 'mapProject', 'wizardProject', 'databaseProject'];
+	const sortByWeight = (a, b) => ((a.data.weight || 0) - (b.data.weight || 0));
+	for (let t of projectTags) {
+		eleventyConfig.addCollection(t + 'sSorted', (collectionsApi) => collectionsApi.getFilteredByTag(t).sort(sortByWeight));
+	}
 };
 
 export const config = {
