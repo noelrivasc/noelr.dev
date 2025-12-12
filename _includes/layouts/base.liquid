@@ -22,6 +22,15 @@
 		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 		{% endcomment %}
 
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-94TD5DYSP0"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-94TD5DYSP0');
+		</script>
 	</head>
 	<body class="bg-ground text-body">
 		<a href="#skip" class="sr-only">Skip to main content</a>
