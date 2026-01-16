@@ -748,6 +748,9 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
+  .pl-0 {
+    padding-left: calc(var(--spacing) * 0);
+  }
   .pl-6 {
     padding-left: calc(var(--spacing) * 6);
   }
@@ -853,6 +856,9 @@
   }
   .text-c06 {
     color: var(--color-c06);
+  }
+  .text-cta {
+    color: var(--color-cta);
   }
   .text-ground {
     color: var(--color-ground);
