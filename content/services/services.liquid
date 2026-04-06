@@ -13,11 +13,12 @@ order: 3
 			Services
 		</h1>
 		<p class="font-thin text-xl md:text-2xl leading-relaxed max-w-3xl">
-			I help climate nonprofit and startup leaders turn ideas into working software.
+			I help climate startup founders turn ideas into working software.
 		</p>
 	</section>
 
 	<!-- In-page navigation -->
+	{% comment %}
 	<nav class="my-8 mb-24 p-4 border border-c03 rounded-lg bg-gradient-to-t dark:from-white/7 to-white/3 shadow-sm">
 		<ul class="list-none flex flex-col md:flex-row md:flex-wrap gap-2 md:gap-24 text-lg font-light">
 			<li><a href="#consultation-call" class="text-body-subtle hover:text-body transition-colors">Consultation Call</a></li>
@@ -25,9 +26,13 @@ order: 3
 			<li><a href="#project-development" class="text-body-subtle hover:text-body transition-colors">Full Project Development</a></li>
 		</ul>
 	</nav>
+	{% endcomment %}
 
 	<!-- Consultation Call -->
+
+	{% comment %}
 	{% render './_call' %}
+	{% endcomment %}
 
 	<!-- Clarity Workshop -->
 	{% render './_clarity-workshop' %}

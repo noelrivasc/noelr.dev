@@ -22,6 +22,7 @@
 		<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 		{% endcomment %}
 
+		{% if env.context == "production" %}
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-94TD5DYSP0"></script>
 		<script>
@@ -31,6 +32,7 @@
 
 			gtag('config', 'G-94TD5DYSP0');
 		</script>
+		{% endif %}
 	</head>
 	<body class="bg-ground text-body">
 		<a href="#skip" class="sr-only">Skip to main content</a>
